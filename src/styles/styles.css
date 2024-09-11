@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    margin-block: 20px;
+}
+
+section{
+    display: grid;
+    grid-template-rows: 15% 1fr 1fr;
+    overflow: hidden;
+    place-items: center;
+    height: 85dvh;
+    max-width: 40dvw;
+    width: 100%;
+    padding: 0;
+
+    img{
+        width: 230px;
+        height: auto;
+    }
+
+    p{
+        text-align: center;
+        font-size: 1rem;
+        margin-inline: 30px
+    }
+}

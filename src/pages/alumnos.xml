@@ -1,0 +1,19 @@
+<!-- Esta puede ser una manera de escribir un archivo xml en vez de un json para hacer una especie de lista -->
+<!-- Otra manera podría ser con un archivo json como el que está en src/js--> 
+<Alumno>
+    <Alumno1>
+        <ID>1</ID>
+        <Nombre>Pablo</Nombre>
+        <DNI>22990189</DNI>
+    </Alumno1>
+    <Alumno2>
+        <ID>2</ID>
+        <Nombre>José</Nombre>
+        <DNI>23020110</DNI>
+    </Alumno2>
+    <Alumno3>
+        <ID>3</ID>
+        <Nombre>Pedro</Nombre>
+        <DNI>22112332</DNI>    
+    </Alumno3>
+</Alumno>

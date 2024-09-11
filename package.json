@@ -1,0 +1,11 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "apuntes y demás sobre APIREST en js",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Valen",
+  "license": "ISC"
+}
