@@ -1,22 +1,28 @@
 /*
 API REST - Interfaz que se utiliza para intercambiar información de manera segura y por internet entre 2 o más apps
 */
-const $character_simpson = document.getElementById('character_simpson');
-const $quote = document.getElementById('quote');
-const $simpson_character_photo = document.getElementById('simpson_character_photo');
+// const $character_simpson = document.getElementById('character_simpson');
+// const $quote = document.getElementById('quote');
+// const $simpson_character_photo = document.getElementById('simpson_character_photo');
+const $quantity_of_quotes = document.getElementById('quantity_of_quotes');
+const $give_quotes = document.getElementById('give_quotes');
 
-async function obtain_quotes () {
+$give_quotes.addEventListener('click', () => {
+    obtain_quotes(parseInt($quantity_of_quotes.value));
+})
+
+async function obtain_quotes (quantity) {
     try{
-        const quotes = await fetch('http://thesimpsonsquoteapi.glitch.me/quotes');
+        const quotes = await fetch(`http://thesimpsonsquoteapi.glitch.me/quotes?count=${quantity}`);
 
         if (!quotes.ok){
             throw new Error("No se puedo obtener la cita");
             
         } else {
             const rta = await quotes.json();
-            $quote.innerHTML = `${rta[0].quote}`;
-            $character_simpson.innerHTML = `${rta[0].character}`;
-            $simpson_character_photo.src = `${rta[0].image}`;
+            // $quote.innerHTML = `${rta[0].quote}`;
+            // $character_simpson.innerHTML = `${rta[0].character}`;
+            // $simpson_character_photo.src = `${rta[0].image}`;
             console.log(rta);
         }
     } catch (error) {
