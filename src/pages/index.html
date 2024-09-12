@@ -7,13 +7,22 @@
     <title>Quotes of Simpsons</title>
 </head>
 <body>
-    <h1>Citas de los simpsons</h1>
-    <section>
-        <input id="quantity_of_quotes" type="number">
-        <button id="give_quotes">Dar Citas</button>
-        <!-- <h2 id="character_simpson"></h2>
-        <img id="simpson_character_photo" src="" alt="simpson character">
-        <p id="quote"></p> -->
+    <h1>Quotes of The Simpsons</h1>
+    <section class="obtaining_quotes">
+        <fieldset>
+            <legend>Enter how many quotes you wanna get:</legend>
+            <input id="quantity_of_quotes" type="number">
+        </fieldset>
+
+        <fieldset>
+            <legend>Select a character:</legend>
+            <select id="characters_list">
+                <option value>characters</option>
+            </select>
+        </fieldset>
+    </section>
+    <button id="give_quotes">Give Quotes</button>
+    <section class="quotes_container">
     </section>
     <script src="../js/main.js"></script>
 </body>
