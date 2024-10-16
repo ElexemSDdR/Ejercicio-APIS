@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon" href="../images/icon-simpsons.webp" type="image/webp">
     <title>Quotes of Simpsons</title>
 </head>
 <body>
@@ -11,14 +12,7 @@
     <section class="obtaining_quotes">
         <fieldset>
             <legend>Enter how many quotes you wanna get:</legend>
-            <input id="quantity_of_quotes" type="number">
-        </fieldset>
-
-        <fieldset>
-            <legend>Select a character:</legend>
-            <select id="characters_list">
-                <option value>characters</option>
-            </select>
+            <input id="quantity_of_quotes" type="number" min="0">
         </fieldset>
     </section>
     <button id="give_quotes">Give Quotes</button>

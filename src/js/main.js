@@ -6,27 +6,24 @@ const $give_quotes = document.getElementById('give_quotes');
 const $quote = document.createElement('div');
 $quote.classList.add('quotes');
 const $container_quote = document.querySelector('.quotes_container');
-const $characters_list = document.getElementById('characters_list');
 
 
 $give_quotes.addEventListener('click', () => {
-    obtain_quotes(parseInt($quantity_of_quotes.value), $characters_list.value);
+    obtain_quotes(parseInt($quantity_of_quotes.value));
     $quantity_of_quotes.value = '';
     $quantity_of_quotes.focus();
 })
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter'){
-        obtain_quotes(parseInt($quantity_of_quotes.value), $characters_list.value);
+        obtain_quotes(parseInt($quantity_of_quotes.value));
         $quantity_of_quotes.value = '';
         $quantity_of_quotes.focus();
     }
 })
 
-async function obtain_quotes (quantity, character) {
-    console.log(quantity, character);
+async function obtain_quotes (quantity) {
     try{
-        const quotes = await fetch(`http://thesimpsonsquoteapi.glitch.me/quotes?count=${quantity}&character=${character}`);
-        console.log(quotes);
+        const quotes = await fetch(`http://thesimpsonsquoteapi.glitch.me/quotes?count=${quantity}`);
 
         if (!quotes.ok){
             throw new Error("No se puedo obtener la cita");
